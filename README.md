@@ -1,4 +1,4 @@
-A small library with some utilities for handling JSON similarly to JavaScript Objects
+A small library with some extras for dart_mappable.
 
 # Untagged Unions
 

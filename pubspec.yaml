@@ -1,6 +1,7 @@
 name: dart_mappable_extras
 description: Untagged Unions and Undefined Types for dart_mappable
 version: 0.1.0
+repository: https://github.com/dickermoshe/dart_mappable_extras
 
 environment:
   sdk: ^3.8.0

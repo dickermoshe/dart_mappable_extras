@@ -1,3 +1,7 @@
+## 0.2.2
+
+- Fix OptionalMapper to handle types which have custom mappers.
+
 ## 0.2.1
 
 - Fixed BytesMapper to handle empty bytes.

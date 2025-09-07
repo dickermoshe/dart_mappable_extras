@@ -50,7 +50,7 @@ class OptionalMapper extends SimpleMapper1<Optional> {
     if (value is Undefined) {
       return const Undefined();
     } else if (value is Defined) {
-      return Defined(value.value);
+      return Defined(container.fromValue<T>(value.value));
     } else {
       throw StateError(
         "OptionalMapper applied to invalid value: $value, type: ${value.runtimeType}",

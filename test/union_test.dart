@@ -2,6 +2,8 @@ import 'package:dart_mappable/dart_mappable.dart';
 import 'package:dart_mappable_extras/dart_mappable_extras.dart';
 import 'package:dart_mappable_extras/src/unions.dart';
 import 'package:test/test.dart';
+
+import 'undefined_test.dart';
 part 'union_test.mapper.dart';
 
 @MappableClass(includeCustomMappers: unionMappers)
@@ -16,7 +18,12 @@ class UnionTest3 with UnionTest3Mappable {
   UnionTest3({required this.union});
 }
 
-@MappableClass(includeCustomMappers: unionMappers)
+@MappableClass(includeCustomMappers: [...unionMappers, CustomTypeMapper()])
+class CustomTypeUnionTest with CustomTypeUnionTestMappable {
+  final Union2<CustomType, int> union;
+  CustomTypeUnionTest({required this.union});
+}
+
 void main() {
   test('union2 mapping test', () {
     final unionTest = UnionTest2(union: Union2.in1('test'));
@@ -31,8 +38,10 @@ void main() {
     expect(unionTest4.toMap(), {'union': 1});
   });
   test('invalid union2 type test', () {
-    expect(() => UnionTest2Mapper.fromMap({'union': true}),
-        throwsA(isA<MapperException>()));
+    expect(
+      () => UnionTest2Mapper.fromMap({'union': true}),
+      throwsA(isA<MapperException>()),
+    );
   });
   test('union3 mapping test', () {
     final unionTest = UnionTest3(union: Union3.in1('test'));
@@ -47,7 +56,25 @@ void main() {
     expect(unionTest4.toMap(), {'union': 1});
   });
   test('invalid union3 type test', () {
-    expect(() => UnionTest3Mapper.fromMap({'union': 1.0}),
-        throwsA(isA<MapperException>()));
+    expect(
+      () => UnionTest3Mapper.fromMap({'union': 1.0}),
+      throwsA(isA<MapperException>()),
+    );
+  });
+  test('custom type union2 mapping test', () {
+    final unionTest = CustomTypeUnionTest(
+      union: Union2.in1(CustomType(value: 'test')),
+    );
+    final json = unionTest.toMap();
+    expect(json, {'union': 'test'});
+    final unionTest2 = CustomTypeUnionTest(union: Union2.in2(1));
+    final json2 = unionTest2.toMap();
+    expect(json2, {'union': 1});
+  });
+  test('invalid custom type union2 type test', () {
+    expect(
+      () => CustomTypeUnionTestMapper.fromMap({'union': true}),
+      throwsA(isA<MapperException>()),
+    );
   });
 }

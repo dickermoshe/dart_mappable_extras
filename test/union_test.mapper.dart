@@ -233,3 +233,126 @@ class _UnionTest3CopyWithImpl<$R, $Out>
   ) => _UnionTest3CopyWithImpl<$R2, $Out2>($value, $cast, t);
 }
 
+class CustomTypeUnionTestMapper extends ClassMapperBase<CustomTypeUnionTest> {
+  CustomTypeUnionTestMapper._();
+
+  static CustomTypeUnionTestMapper? _instance;
+  static CustomTypeUnionTestMapper ensureInitialized() {
+    if (_instance == null) {
+      MapperContainer.globals.use(_instance = CustomTypeUnionTestMapper._());
+      MapperContainer.globals.useAll([...unionMappers, CustomTypeMapper()]);
+    }
+    return _instance!;
+  }
+
+  @override
+  final String id = 'CustomTypeUnionTest';
+
+  static Union2<CustomType, int> _$union(CustomTypeUnionTest v) => v.union;
+  static const Field<CustomTypeUnionTest, Union2<CustomType, int>> _f$union =
+      Field('union', _$union);
+
+  @override
+  final MappableFields<CustomTypeUnionTest> fields = const {#union: _f$union};
+
+  static CustomTypeUnionTest _instantiate(DecodingData data) {
+    return CustomTypeUnionTest(union: data.dec(_f$union));
+  }
+
+  @override
+  final Function instantiate = _instantiate;
+
+  static CustomTypeUnionTest fromMap(Map<String, dynamic> map) {
+    return ensureInitialized().decodeMap<CustomTypeUnionTest>(map);
+  }
+
+  static CustomTypeUnionTest fromJson(String json) {
+    return ensureInitialized().decodeJson<CustomTypeUnionTest>(json);
+  }
+}
+
+mixin CustomTypeUnionTestMappable {
+  String toJson() {
+    return CustomTypeUnionTestMapper.ensureInitialized()
+        .encodeJson<CustomTypeUnionTest>(this as CustomTypeUnionTest);
+  }
+
+  Map<String, dynamic> toMap() {
+    return CustomTypeUnionTestMapper.ensureInitialized()
+        .encodeMap<CustomTypeUnionTest>(this as CustomTypeUnionTest);
+  }
+
+  CustomTypeUnionTestCopyWith<
+    CustomTypeUnionTest,
+    CustomTypeUnionTest,
+    CustomTypeUnionTest
+  >
+  get copyWith =>
+      _CustomTypeUnionTestCopyWithImpl<
+        CustomTypeUnionTest,
+        CustomTypeUnionTest
+      >(this as CustomTypeUnionTest, $identity, $identity);
+  @override
+  String toString() {
+    return CustomTypeUnionTestMapper.ensureInitialized().stringifyValue(
+      this as CustomTypeUnionTest,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return CustomTypeUnionTestMapper.ensureInitialized().equalsValue(
+      this as CustomTypeUnionTest,
+      other,
+    );
+  }
+
+  @override
+  int get hashCode {
+    return CustomTypeUnionTestMapper.ensureInitialized().hashValue(
+      this as CustomTypeUnionTest,
+    );
+  }
+}
+
+extension CustomTypeUnionTestValueCopy<$R, $Out>
+    on ObjectCopyWith<$R, CustomTypeUnionTest, $Out> {
+  CustomTypeUnionTestCopyWith<$R, CustomTypeUnionTest, $Out>
+  get $asCustomTypeUnionTest => $base.as(
+    (v, t, t2) => _CustomTypeUnionTestCopyWithImpl<$R, $Out>(v, t, t2),
+  );
+}
+
+abstract class CustomTypeUnionTestCopyWith<
+  $R,
+  $In extends CustomTypeUnionTest,
+  $Out
+>
+    implements ClassCopyWith<$R, $In, $Out> {
+  $R call({Union2<CustomType, int>? union});
+  CustomTypeUnionTestCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(
+    Then<$Out2, $R2> t,
+  );
+}
+
+class _CustomTypeUnionTestCopyWithImpl<$R, $Out>
+    extends ClassCopyWithBase<$R, CustomTypeUnionTest, $Out>
+    implements CustomTypeUnionTestCopyWith<$R, CustomTypeUnionTest, $Out> {
+  _CustomTypeUnionTestCopyWithImpl(super.value, super.then, super.then2);
+
+  @override
+  late final ClassMapperBase<CustomTypeUnionTest> $mapper =
+      CustomTypeUnionTestMapper.ensureInitialized();
+  @override
+  $R call({Union2<CustomType, int>? union}) =>
+      $apply(FieldCopyWithData({if (union != null) #union: union}));
+  @override
+  CustomTypeUnionTest $make(CopyWithData data) =>
+      CustomTypeUnionTest(union: data.get(#union, or: $value.union));
+
+  @override
+  CustomTypeUnionTestCopyWith<$R2, CustomTypeUnionTest, $Out2>
+  $chain<$R2, $Out2>(Then<$Out2, $R2> t) =>
+      _CustomTypeUnionTestCopyWithImpl<$R2, $Out2>($value, $cast, t);
+}
+

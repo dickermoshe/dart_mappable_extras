@@ -1,3 +1,7 @@
+## 0.2.3
+
+- Fix UnionMapper to handle types which have custom mappers.
+
 ## 0.2.2
 
 - Fix OptionalMapper to handle types which have custom mappers.

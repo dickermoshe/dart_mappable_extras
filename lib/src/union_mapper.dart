@@ -1,5 +1,6 @@
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:dart_mappable_extras/src/unions.dart';
+import 'package:collection/collection.dart';
 
 abstract class _SimpleMapperBase<T extends Object> extends MapperBase<T> {
   const _SimpleMapperBase();
@@ -153,12 +154,22 @@ abstract class _SimpleMapper5Bounded<T extends Object, B1, B2, B3, B4, B5>
     extends _SimpleMapperBase<T> {
   const _SimpleMapper5Bounded();
 
-  T decode<A extends B1, B extends B2, C extends B3, D extends B4,
-      E extends B5>(Object value);
+  T decode<
+    A extends B1,
+    B extends B2,
+    C extends B3,
+    D extends B4,
+    E extends B5
+  >(Object value);
 
   /// Override as `Object? encode<A, B, C, D, E>(MyClass<A, B, C, D, E> self)`
-  Object? encode<A extends B1, B extends B2, C extends B3, D extends B4,
-      E extends B5>(covariant T self);
+  Object? encode<
+    A extends B1,
+    B extends B2,
+    C extends B3,
+    D extends B4,
+    E extends B5
+  >(covariant T self);
 
   @override
   T _decode(Object value, DecodingContext context) {
@@ -173,8 +184,9 @@ abstract class _SimpleMapper5Bounded<T extends Object, B1, B2, B3, B4, B5>
   }
 }
 
-abstract class _SimpleMapper5<T extends Object> extends _SimpleMapper5Bounded<T,
-    dynamic, dynamic, dynamic, dynamic, dynamic> {
+abstract class _SimpleMapper5<T extends Object>
+    extends
+        _SimpleMapper5Bounded<T, dynamic, dynamic, dynamic, dynamic, dynamic> {
   const _SimpleMapper5();
 
   @override
@@ -188,12 +200,24 @@ abstract class _SimpleMapper6Bounded<T extends Object, B1, B2, B3, B4, B5, B6>
     extends _SimpleMapperBase<T> {
   const _SimpleMapper6Bounded();
 
-  T decode<A extends B1, B extends B2, C extends B3, D extends B4, E extends B5,
-      F extends B6>(Object value);
+  T decode<
+    A extends B1,
+    B extends B2,
+    C extends B3,
+    D extends B4,
+    E extends B5,
+    F extends B6
+  >(Object value);
 
   /// Override as `Object? encode<A, B, C, D, E, F>(MyClass<A, B, C, D, E, F> self)`
-  Object? encode<A extends B1, B extends B2, C extends B3, D extends B4,
-      E extends B5, F extends B6>(covariant T self);
+  Object? encode<
+    A extends B1,
+    B extends B2,
+    C extends B3,
+    D extends B4,
+    E extends B5,
+    F extends B6
+  >(covariant T self);
 
   @override
   T _decode(Object value, DecodingContext context) {
@@ -208,8 +232,17 @@ abstract class _SimpleMapper6Bounded<T extends Object, B1, B2, B3, B4, B5, B6>
   }
 }
 
-abstract class _SimpleMapper6<T extends Object> extends _SimpleMapper6Bounded<T,
-    dynamic, dynamic, dynamic, dynamic, dynamic, dynamic> {
+abstract class _SimpleMapper6<T extends Object>
+    extends
+        _SimpleMapper6Bounded<
+          T,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic
+        > {
   const _SimpleMapper6();
 
   @override
@@ -219,16 +252,39 @@ abstract class _SimpleMapper6<T extends Object> extends _SimpleMapper6Bounded<T,
   Object? encode<A, B, C, D, E, F>(covariant T self);
 }
 
-abstract class _SimpleMapper7Bounded<T extends Object, B1, B2, B3, B4, B5, B6,
-    B7> extends _SimpleMapperBase<T> {
+abstract class _SimpleMapper7Bounded<
+  T extends Object,
+  B1,
+  B2,
+  B3,
+  B4,
+  B5,
+  B6,
+  B7
+>
+    extends _SimpleMapperBase<T> {
   const _SimpleMapper7Bounded();
 
-  T decode<A extends B1, B extends B2, C extends B3, D extends B4, E extends B5,
-      F extends B6, G extends B7>(Object value);
+  T decode<
+    A extends B1,
+    B extends B2,
+    C extends B3,
+    D extends B4,
+    E extends B5,
+    F extends B6,
+    G extends B7
+  >(Object value);
 
   /// Override as `Object? encode<A, B, C, D, E, F, G>(MyClass<A, B, C, D, E, F, G> self)`
-  Object? encode<A extends B1, B extends B2, C extends B3, D extends B4,
-      E extends B5, F extends B6, G extends B7>(covariant T self);
+  Object? encode<
+    A extends B1,
+    B extends B2,
+    C extends B3,
+    D extends B4,
+    E extends B5,
+    F extends B6,
+    G extends B7
+  >(covariant T self);
 
   @override
   T _decode(Object value, DecodingContext context) {
@@ -243,8 +299,18 @@ abstract class _SimpleMapper7Bounded<T extends Object, B1, B2, B3, B4, B5, B6,
   }
 }
 
-abstract class _SimpleMapper7<T extends Object> extends _SimpleMapper7Bounded<T,
-    dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic> {
+abstract class _SimpleMapper7<T extends Object>
+    extends
+        _SimpleMapper7Bounded<
+          T,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic
+        > {
   const _SimpleMapper7();
 
   @override
@@ -254,16 +320,42 @@ abstract class _SimpleMapper7<T extends Object> extends _SimpleMapper7Bounded<T,
   Object? encode<A, B, C, D, E, F, G>(covariant T self);
 }
 
-abstract class _SimpleMapper8Bounded<T extends Object, B1, B2, B3, B4, B5, B6,
-    B7, B8> extends _SimpleMapperBase<T> {
+abstract class _SimpleMapper8Bounded<
+  T extends Object,
+  B1,
+  B2,
+  B3,
+  B4,
+  B5,
+  B6,
+  B7,
+  B8
+>
+    extends _SimpleMapperBase<T> {
   const _SimpleMapper8Bounded();
 
-  T decode<A extends B1, B extends B2, C extends B3, D extends B4, E extends B5,
-      F extends B6, G extends B7, H extends B8>(Object value);
+  T decode<
+    A extends B1,
+    B extends B2,
+    C extends B3,
+    D extends B4,
+    E extends B5,
+    F extends B6,
+    G extends B7,
+    H extends B8
+  >(Object value);
 
   /// Override as `Object? encode<A, B, C, D, E, F, G, H>(MyClass<A, B, C, D, E, F, G, H> self)`
-  Object? encode<A extends B1, B extends B2, C extends B3, D extends B4,
-      E extends B5, F extends B6, G extends B7, H extends B8>(covariant T self);
+  Object? encode<
+    A extends B1,
+    B extends B2,
+    C extends B3,
+    D extends B4,
+    E extends B5,
+    F extends B6,
+    G extends B7,
+    H extends B8
+  >(covariant T self);
 
   @override
   T _decode(Object value, DecodingContext context) {
@@ -278,8 +370,19 @@ abstract class _SimpleMapper8Bounded<T extends Object, B1, B2, B3, B4, B5, B6,
   }
 }
 
-abstract class _SimpleMapper8<T extends Object> extends _SimpleMapper8Bounded<T,
-    dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic, dynamic> {
+abstract class _SimpleMapper8<T extends Object>
+    extends
+        _SimpleMapper8Bounded<
+          T,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic
+        > {
   const _SimpleMapper8();
 
   @override
@@ -289,24 +392,45 @@ abstract class _SimpleMapper8<T extends Object> extends _SimpleMapper8Bounded<T,
   Object? encode<A, B, C, D, E, F, G, H>(covariant T self);
 }
 
-abstract class _SimpleMapper9Bounded<T extends Object, B1, B2, B3, B4, B5, B6,
-    B7, B8, B9> extends _SimpleMapperBase<T> {
+abstract class _SimpleMapper9Bounded<
+  T extends Object,
+  B1,
+  B2,
+  B3,
+  B4,
+  B5,
+  B6,
+  B7,
+  B8,
+  B9
+>
+    extends _SimpleMapperBase<T> {
   const _SimpleMapper9Bounded();
 
-  T decode<A extends B1, B extends B2, C extends B3, D extends B4, E extends B5,
-      F extends B6, G extends B7, H extends B8, I extends B9>(Object value);
+  T decode<
+    A extends B1,
+    B extends B2,
+    C extends B3,
+    D extends B4,
+    E extends B5,
+    F extends B6,
+    G extends B7,
+    H extends B8,
+    I extends B9
+  >(Object value);
 
   /// Override as `Object? encode<A, B, C, D, E, F, G, H, I>(MyClass<A, B, C, D, E, F, G, H, I> self)`
   Object? encode<
-      A extends B1,
-      B extends B2,
-      C extends B3,
-      D extends B4,
-      E extends B5,
-      F extends B6,
-      G extends B7,
-      H extends B8,
-      I extends B9>(covariant T self);
+    A extends B1,
+    B extends B2,
+    C extends B3,
+    D extends B4,
+    E extends B5,
+    F extends B6,
+    G extends B7,
+    H extends B8,
+    I extends B9
+  >(covariant T self);
 
   @override
   T _decode(Object value, DecodingContext context) {
@@ -321,17 +445,20 @@ abstract class _SimpleMapper9Bounded<T extends Object, B1, B2, B3, B4, B5, B6,
   }
 }
 
-abstract class _SimpleMapper9<T extends Object> extends _SimpleMapper9Bounded<
-    T,
-    dynamic,
-    dynamic,
-    dynamic,
-    dynamic,
-    dynamic,
-    dynamic,
-    dynamic,
-    dynamic,
-    dynamic> {
+abstract class _SimpleMapper9<T extends Object>
+    extends
+        _SimpleMapper9Bounded<
+          T,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic,
+          dynamic
+        > {
   const _SimpleMapper9();
 
   @override
@@ -347,6 +474,17 @@ class Union2Mapper extends _SimpleMapper2<Union2> {
 
   @override
   Union2<A, B> decode<A, B>(Object value) {
+    /// First try to use the custom mapper for the type.
+    final aMapper = container.mapperForType(A);
+    if (aMapper != null) {
+      return Union2.in1(aMapper.decodeValue<A>(value));
+    }
+    final bMapper = container.mapperForType(B);
+    if (bMapper != null) {
+      return Union2.in2(bMapper.decodeValue<B>(value));
+    }
+
+    /// If no custom mapper is found, try to use the default mapper.
     if (value is A) {
       return Union2.in1(value as A);
     } else if (value is B) {
@@ -368,7 +506,8 @@ class Union2Mapper extends _SimpleMapper2<Union2> {
   }
 
   @override
-  Function get typeFactory => <A, B>(f) => f<Union2<A, B>>();
+  Function get typeFactory =>
+      <A, B>(f) => f<Union2<A, B>>();
 }
 
 /// A Type Mapper for the Union3 type
@@ -377,6 +516,21 @@ class Union3Mapper extends _SimpleMapper3<Union3> {
 
   @override
   Union3<A, B, C> decode<A, B, C>(Object value) {
+    /// First try to use the custom mapper for the type.
+    final aMapper = container.mapperForType(A);
+    if (aMapper != null) {
+      return Union3.in1(aMapper.decodeValue<A>(value));
+    }
+    final bMapper = container.mapperForType(B);
+    if (bMapper != null) {
+      return Union3.in2(bMapper.decodeValue<B>(value));
+    }
+    final cMapper = container.mapperForType(C);
+    if (cMapper != null) {
+      return Union3.in3(cMapper.decodeValue<C>(value));
+    }
+
+    /// If no custom mapper is found, try to use the default mapper.
     if (value is A) {
       return Union3.in1(value as A);
     } else if (value is B) {
@@ -402,7 +556,8 @@ class Union3Mapper extends _SimpleMapper3<Union3> {
   }
 
   @override
-  Function get typeFactory => <A, B, C>(f) => f<Union3<A, B, C>>();
+  Function get typeFactory =>
+      <A, B, C>(f) => f<Union3<A, B, C>>();
 }
 
 /// A Type Mapper for the Union4 type
@@ -411,6 +566,25 @@ class Union4Mapper extends _SimpleMapper4<Union4> {
 
   @override
   Union4<A, B, C, D> decode<A, B, C, D>(Object value) {
+    /// First try to use the custom mapper for the type.
+    final aMapper = container.mapperForType(A);
+    if (aMapper != null) {
+      return Union4.in1(aMapper.decodeValue<A>(value));
+    }
+    final bMapper = container.mapperForType(B);
+    if (bMapper != null) {
+      return Union4.in2(bMapper.decodeValue<B>(value));
+    }
+    final cMapper = container.mapperForType(C);
+    if (cMapper != null) {
+      return Union4.in3(cMapper.decodeValue<C>(value));
+    }
+    final dMapper = container.mapperForType(D);
+    if (dMapper != null) {
+      return Union4.in4(dMapper.decodeValue<D>(value));
+    }
+
+    /// If no custom mapper is found, try to use the default mapper.
     if (value is A) {
       return Union4.in1(value as A);
     } else if (value is B) {
@@ -440,7 +614,8 @@ class Union4Mapper extends _SimpleMapper4<Union4> {
   }
 
   @override
-  Function get typeFactory => <A, B, C, D>(f) => f<Union4<A, B, C, D>>();
+  Function get typeFactory =>
+      <A, B, C, D>(f) => f<Union4<A, B, C, D>>();
 }
 
 /// A Type Mapper for the Union5 type
@@ -449,6 +624,29 @@ class Union5Mapper extends _SimpleMapper5<Union5> {
 
   @override
   Union5<A, B, C, D, E> decode<A, B, C, D, E>(Object value) {
+    /// First try to use the custom mapper for the type.
+    final aMapper = container.mapperForType(A);
+    if (aMapper != null) {
+      return Union5.in1(aMapper.decodeValue<A>(value));
+    }
+    final bMapper = container.mapperForType(B);
+    if (bMapper != null) {
+      return Union5.in2(bMapper.decodeValue<B>(value));
+    }
+    final cMapper = container.mapperForType(C);
+    if (cMapper != null) {
+      return Union5.in3(cMapper.decodeValue<C>(value));
+    }
+    final dMapper = container.mapperForType(D);
+    if (dMapper != null) {
+      return Union5.in4(dMapper.decodeValue<D>(value));
+    }
+    final eMapper = container.mapperForType(E);
+    if (eMapper != null) {
+      return Union5.in5(eMapper.decodeValue<E>(value));
+    }
+
+    /// If no custom mapper is found, try to use the default mapper.
     if (value is A) {
       return Union5.in1(value as A);
     } else if (value is B) {
@@ -482,7 +680,8 @@ class Union5Mapper extends _SimpleMapper5<Union5> {
   }
 
   @override
-  Function get typeFactory => <A, B, C, D, E>(f) => f<Union5<A, B, C, D, E>>();
+  Function get typeFactory =>
+      <A, B, C, D, E>(f) => f<Union5<A, B, C, D, E>>();
 }
 
 /// A Type Mapper for the Union6 type
@@ -491,6 +690,33 @@ class Union6Mapper extends _SimpleMapper6<Union6> {
 
   @override
   Union6<A, B, C, D, E, F> decode<A, B, C, D, E, F>(Object value) {
+    /// First try to use the custom mapper for the type.
+    final aMapper = container.mapperForType(A);
+    if (aMapper != null) {
+      return Union6.in1(aMapper.decodeValue<A>(value));
+    }
+    final bMapper = container.mapperForType(B);
+    if (bMapper != null) {
+      return Union6.in2(bMapper.decodeValue<B>(value));
+    }
+    final cMapper = container.mapperForType(C);
+    if (cMapper != null) {
+      return Union6.in3(cMapper.decodeValue<C>(value));
+    }
+    final dMapper = container.mapperForType(D);
+    if (dMapper != null) {
+      return Union6.in4(dMapper.decodeValue<D>(value));
+    }
+    final eMapper = container.mapperForType(E);
+    if (eMapper != null) {
+      return Union6.in5(eMapper.decodeValue<E>(value));
+    }
+    final fMapper = container.mapperForType(F);
+    if (fMapper != null) {
+      return Union6.in6(fMapper.decodeValue<F>(value));
+    }
+
+    /// If no custom mapper is found, try to use the default mapper.
     if (value is A) {
       return Union6.in1(value as A);
     } else if (value is B) {
@@ -541,6 +767,37 @@ class Union7Mapper extends _SimpleMapper7<Union7> {
 
   @override
   Union7<A, B, C, D, E, F, G> decode<A, B, C, D, E, F, G>(Object value) {
+    /// First try to use the custom mapper for the type.
+    final aMapper = container.mapperForType(A);
+    if (aMapper != null) {
+      return Union7.in1(aMapper.decodeValue<A>(value));
+    }
+    final bMapper = container.mapperForType(B);
+    if (bMapper != null) {
+      return Union7.in2(bMapper.decodeValue<B>(value));
+    }
+    final cMapper = container.mapperForType(C);
+    if (cMapper != null) {
+      return Union7.in3(cMapper.decodeValue<C>(value));
+    }
+    final dMapper = container.mapperForType(D);
+    if (dMapper != null) {
+      return Union7.in4(dMapper.decodeValue<D>(value));
+    }
+    final eMapper = container.mapperForType(E);
+    if (eMapper != null) {
+      return Union7.in5(eMapper.decodeValue<E>(value));
+    }
+    final fMapper = container.mapperForType(F);
+    if (fMapper != null) {
+      return Union7.in6(fMapper.decodeValue<F>(value));
+    }
+    final gMapper = container.mapperForType(G);
+    if (gMapper != null) {
+      return Union7.in7(gMapper.decodeValue<G>(value));
+    }
+
+    /// If no custom mapper is found, try to use the default mapper.
     if (value is A) {
       return Union7.in1(value as A);
     } else if (value is B) {
@@ -598,6 +855,41 @@ class Union8Mapper extends _SimpleMapper8<Union8> {
 
   @override
   Union8<A, B, C, D, E, F, G, H> decode<A, B, C, D, E, F, G, H>(Object value) {
+    /// First try to use the custom mapper for the type.
+    final aMapper = container.mapperForType(A);
+    if (aMapper != null) {
+      return Union8.in1(aMapper.decodeValue<A>(value));
+    }
+    final bMapper = container.mapperForType(B);
+    if (bMapper != null) {
+      return Union8.in2(bMapper.decodeValue<B>(value));
+    }
+    final cMapper = container.mapperForType(C);
+    if (cMapper != null) {
+      return Union8.in3(cMapper.decodeValue<C>(value));
+    }
+    final dMapper = container.mapperForType(D);
+    if (dMapper != null) {
+      return Union8.in4(dMapper.decodeValue<D>(value));
+    }
+    final eMapper = container.mapperForType(E);
+    if (eMapper != null) {
+      return Union8.in5(eMapper.decodeValue<E>(value));
+    }
+    final fMapper = container.mapperForType(F);
+    if (fMapper != null) {
+      return Union8.in6(fMapper.decodeValue<F>(value));
+    }
+    final gMapper = container.mapperForType(G);
+    if (gMapper != null) {
+      return Union8.in7(gMapper.decodeValue<G>(value));
+    }
+    final hMapper = container.mapperForType(H);
+    if (hMapper != null) {
+      return Union8.in8(hMapper.decodeValue<H>(value));
+    }
+
+    /// If no custom mapper is found, try to use the default mapper.
     if (value is A) {
       return Union8.in1(value as A);
     } else if (value is B) {
@@ -661,6 +953,45 @@ class Union9Mapper extends _SimpleMapper9<Union9> {
   Union9<A, B, C, D, E, F, G, H, I> decode<A, B, C, D, E, F, G, H, I>(
     Object value,
   ) {
+    /// First try to use the custom mapper for the type.
+    final aMapper = container.mapperForType(A);
+    if (aMapper != null) {
+      return Union9.in1(aMapper.decodeValue<A>(value));
+    }
+    final bMapper = container.mapperForType(B);
+    if (bMapper != null) {
+      return Union9.in2(bMapper.decodeValue<B>(value));
+    }
+    final cMapper = container.mapperForType(C);
+    if (cMapper != null) {
+      return Union9.in3(cMapper.decodeValue<C>(value));
+    }
+    final dMapper = container.mapperForType(D);
+    if (dMapper != null) {
+      return Union9.in4(dMapper.decodeValue<D>(value));
+    }
+    final eMapper = container.mapperForType(E);
+    if (eMapper != null) {
+      return Union9.in5(eMapper.decodeValue<E>(value));
+    }
+    final fMapper = container.mapperForType(F);
+    if (fMapper != null) {
+      return Union9.in6(fMapper.decodeValue<F>(value));
+    }
+    final gMapper = container.mapperForType(G);
+    if (gMapper != null) {
+      return Union9.in7(gMapper.decodeValue<G>(value));
+    }
+    final hMapper = container.mapperForType(H);
+    if (hMapper != null) {
+      return Union9.in8(hMapper.decodeValue<H>(value));
+    }
+    final iMapper = container.mapperForType(I);
+    if (iMapper != null) {
+      return Union9.in9(iMapper.decodeValue<I>(value));
+    }
+
+    /// If no custom mapper is found, try to use the default mapper.
     if (value is A) {
       return Union9.in1(value as A);
     } else if (value is B) {
@@ -733,3 +1064,11 @@ const unionMappers = <MapperBase>[
   Union8Mapper(),
   Union9Mapper(),
 ];
+
+extension on MapperContainer {
+  /// Given a list of types, return the first mapper that is for one of the types.
+  /// If no mapper is found, return null.
+  MapperBase? mapperForType(Type type) {
+    return getAll().firstWhereOrNull((e) => e.isFor(type));
+  }
+}

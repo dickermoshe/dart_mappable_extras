@@ -53,7 +53,8 @@ class OptionalMapper extends SimpleMapper1<Optional> {
       return Defined(value.value);
     } else {
       throw StateError(
-          "OptionalMapper applied to invalid value: $value, type: ${value.runtimeType}");
+        "OptionalMapper applied to invalid value: $value, type: ${value.runtimeType}",
+      );
     }
   }
 
@@ -67,7 +68,8 @@ class OptionalMapper extends SimpleMapper1<Optional> {
   }
 
   @override
-  Function get typeFactory => <T>(f) => f<Optional<T>>();
+  Function get typeFactory =>
+      <T>(f) => f<Optional<T>>();
 }
 
 /// A mapping hook that removes undefined fields from the map.
@@ -86,7 +88,7 @@ class RemoveUndefinedFields extends MappingHook {
       if (value.values.any((v) => v == const Undefined())) {
         final filteredMap = {
           for (var entry in value.entries)
-            if (entry.value != const Undefined()) entry.key: entry.value
+            if (entry.value != const Undefined()) entry.key: entry.value,
         };
         return filteredMap.cast<String, dynamic>();
       }
@@ -108,7 +110,6 @@ class RemoveUndefinedFields extends MappingHook {
           copiedMap[field] = const Undefined();
         }
       }
-      print('copiedMap: $copiedMap');
       return copiedMap.cast<String, dynamic>();
     }
 

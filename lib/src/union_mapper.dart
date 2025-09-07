@@ -1069,6 +1069,6 @@ extension on MapperContainer {
   /// Given a list of types, return the first mapper that is for one of the types.
   /// If no mapper is found, return null.
   MapperBase? mapperForType(Type type) {
-    return getAll().firstWhereOrNull((e) => e.isFor(type));
+    return getAll().firstWhereOrNull((e) => e.type == type);
   }
 }

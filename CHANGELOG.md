@@ -1,3 +1,7 @@
+## 0.2.4
+
+- Better mapper look up. Follow up to 0.2.3.
+
 ## 0.2.3
 
 - Fix UnionMapper to handle types which have custom mappers.

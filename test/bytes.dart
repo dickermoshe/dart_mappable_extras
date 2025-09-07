@@ -16,4 +16,8 @@ void main() {
     final model = BytesTest(bytes: bytes);
     expect(model.bytes, bytes);
   });
+  test('empty bytes', () {
+    final model = BytesTest(bytes: Uint8List.fromList([]));
+    expect(model.bytes, Uint8List.fromList([]));
+  });
 }

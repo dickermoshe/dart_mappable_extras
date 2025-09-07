@@ -7,7 +7,7 @@ class BytesMapper extends SimpleMapper<Uint8List> {
 
   @override
   Uint8List decode(Object value) {
-    return Uint8List.fromList(value as List<int>);
+    return Uint8List.fromList((value as List).cast<int>());
   }
 
   @override

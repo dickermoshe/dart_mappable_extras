@@ -20,6 +20,8 @@ void main() {
 }
 ```
 
+When deserializing, the mapper will attempt to deserialize the value with each mapper in order until one succeeds. If no mapper succeeds, an Exception is thrown.
+
 # Optional
 
 This library allows you to use an optional type with dart_mappable.

@@ -1,3 +1,5 @@
+// ignore_for_file: empty_catches
+
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:dart_mappable_extras/src/unions.dart';
 import 'package:collection/collection.dart';
@@ -477,11 +479,15 @@ class Union2Mapper extends _SimpleMapper2<Union2> {
     /// First try to use the custom mapper for the type.
     final aMapper = container.mapperForType(A);
     if (aMapper != null) {
-      return Union2.in1(aMapper.decodeValue<A>(value));
+      try {
+        return Union2.in1(aMapper.decodeValue<A>(value));
+      } catch (e) {}
     }
     final bMapper = container.mapperForType(B);
     if (bMapper != null) {
-      return Union2.in2(bMapper.decodeValue<B>(value));
+      try {
+        return Union2.in2(bMapper.decodeValue<B>(value));
+      } catch (e) {}
     }
 
     /// If no custom mapper is found, try to use the default mapper.
@@ -519,15 +525,21 @@ class Union3Mapper extends _SimpleMapper3<Union3> {
     /// First try to use the custom mapper for the type.
     final aMapper = container.mapperForType(A);
     if (aMapper != null) {
-      return Union3.in1(aMapper.decodeValue<A>(value));
+      try {
+        return Union3.in1(aMapper.decodeValue<A>(value));
+      } catch (e) {}
     }
     final bMapper = container.mapperForType(B);
     if (bMapper != null) {
-      return Union3.in2(bMapper.decodeValue<B>(value));
+      try {
+        return Union3.in2(bMapper.decodeValue<B>(value));
+      } catch (e) {}
     }
     final cMapper = container.mapperForType(C);
     if (cMapper != null) {
-      return Union3.in3(cMapper.decodeValue<C>(value));
+      try {
+        return Union3.in3(cMapper.decodeValue<C>(value));
+      } catch (e) {}
     }
 
     /// If no custom mapper is found, try to use the default mapper.
@@ -569,19 +581,27 @@ class Union4Mapper extends _SimpleMapper4<Union4> {
     /// First try to use the custom mapper for the type.
     final aMapper = container.mapperForType(A);
     if (aMapper != null) {
-      return Union4.in1(aMapper.decodeValue<A>(value));
+      try {
+        return Union4.in1(aMapper.decodeValue<A>(value));
+      } catch (e) {}
     }
     final bMapper = container.mapperForType(B);
     if (bMapper != null) {
-      return Union4.in2(bMapper.decodeValue<B>(value));
+      try {
+        return Union4.in2(bMapper.decodeValue<B>(value));
+      } catch (e) {}
     }
     final cMapper = container.mapperForType(C);
     if (cMapper != null) {
-      return Union4.in3(cMapper.decodeValue<C>(value));
+      try {
+        return Union4.in3(cMapper.decodeValue<C>(value));
+      } catch (e) {}
     }
     final dMapper = container.mapperForType(D);
     if (dMapper != null) {
-      return Union4.in4(dMapper.decodeValue<D>(value));
+      try {
+        return Union4.in4(dMapper.decodeValue<D>(value));
+      } catch (e) {}
     }
 
     /// If no custom mapper is found, try to use the default mapper.
@@ -627,23 +647,33 @@ class Union5Mapper extends _SimpleMapper5<Union5> {
     /// First try to use the custom mapper for the type.
     final aMapper = container.mapperForType(A);
     if (aMapper != null) {
-      return Union5.in1(aMapper.decodeValue<A>(value));
+      try {
+        return Union5.in1(aMapper.decodeValue<A>(value));
+      } catch (e) {}
     }
     final bMapper = container.mapperForType(B);
     if (bMapper != null) {
-      return Union5.in2(bMapper.decodeValue<B>(value));
+      try {
+        return Union5.in2(bMapper.decodeValue<B>(value));
+      } catch (e) {}
     }
     final cMapper = container.mapperForType(C);
     if (cMapper != null) {
-      return Union5.in3(cMapper.decodeValue<C>(value));
+      try {
+        return Union5.in3(cMapper.decodeValue<C>(value));
+      } catch (e) {}
     }
     final dMapper = container.mapperForType(D);
     if (dMapper != null) {
-      return Union5.in4(dMapper.decodeValue<D>(value));
+      try {
+        return Union5.in4(dMapper.decodeValue<D>(value));
+      } catch (e) {}
     }
     final eMapper = container.mapperForType(E);
     if (eMapper != null) {
-      return Union5.in5(eMapper.decodeValue<E>(value));
+      try {
+        return Union5.in5(eMapper.decodeValue<E>(value));
+      } catch (e) {}
     }
 
     /// If no custom mapper is found, try to use the default mapper.
@@ -693,27 +723,39 @@ class Union6Mapper extends _SimpleMapper6<Union6> {
     /// First try to use the custom mapper for the type.
     final aMapper = container.mapperForType(A);
     if (aMapper != null) {
-      return Union6.in1(aMapper.decodeValue<A>(value));
+      try {
+        return Union6.in1(aMapper.decodeValue<A>(value));
+      } catch (e) {}
     }
     final bMapper = container.mapperForType(B);
     if (bMapper != null) {
-      return Union6.in2(bMapper.decodeValue<B>(value));
+      try {
+        return Union6.in2(bMapper.decodeValue<B>(value));
+      } catch (e) {}
     }
     final cMapper = container.mapperForType(C);
     if (cMapper != null) {
-      return Union6.in3(cMapper.decodeValue<C>(value));
+      try {
+        return Union6.in3(cMapper.decodeValue<C>(value));
+      } catch (e) {}
     }
     final dMapper = container.mapperForType(D);
     if (dMapper != null) {
-      return Union6.in4(dMapper.decodeValue<D>(value));
+      try {
+        return Union6.in4(dMapper.decodeValue<D>(value));
+      } catch (e) {}
     }
     final eMapper = container.mapperForType(E);
     if (eMapper != null) {
-      return Union6.in5(eMapper.decodeValue<E>(value));
+      try {
+        return Union6.in5(eMapper.decodeValue<E>(value));
+      } catch (e) {}
     }
     final fMapper = container.mapperForType(F);
     if (fMapper != null) {
-      return Union6.in6(fMapper.decodeValue<F>(value));
+      try {
+        return Union6.in6(fMapper.decodeValue<F>(value));
+      } catch (e) {}
     }
 
     /// If no custom mapper is found, try to use the default mapper.
@@ -770,31 +812,45 @@ class Union7Mapper extends _SimpleMapper7<Union7> {
     /// First try to use the custom mapper for the type.
     final aMapper = container.mapperForType(A);
     if (aMapper != null) {
-      return Union7.in1(aMapper.decodeValue<A>(value));
+      try {
+        return Union7.in1(aMapper.decodeValue<A>(value));
+      } catch (e) {}
     }
     final bMapper = container.mapperForType(B);
     if (bMapper != null) {
-      return Union7.in2(bMapper.decodeValue<B>(value));
+      try {
+        return Union7.in2(bMapper.decodeValue<B>(value));
+      } catch (e) {}
     }
     final cMapper = container.mapperForType(C);
     if (cMapper != null) {
-      return Union7.in3(cMapper.decodeValue<C>(value));
+      try {
+        return Union7.in3(cMapper.decodeValue<C>(value));
+      } catch (e) {}
     }
     final dMapper = container.mapperForType(D);
     if (dMapper != null) {
-      return Union7.in4(dMapper.decodeValue<D>(value));
+      try {
+        return Union7.in4(dMapper.decodeValue<D>(value));
+      } catch (e) {}
     }
     final eMapper = container.mapperForType(E);
     if (eMapper != null) {
-      return Union7.in5(eMapper.decodeValue<E>(value));
+      try {
+        return Union7.in5(eMapper.decodeValue<E>(value));
+      } catch (e) {}
     }
     final fMapper = container.mapperForType(F);
     if (fMapper != null) {
-      return Union7.in6(fMapper.decodeValue<F>(value));
+      try {
+        return Union7.in6(fMapper.decodeValue<F>(value));
+      } catch (e) {}
     }
     final gMapper = container.mapperForType(G);
     if (gMapper != null) {
-      return Union7.in7(gMapper.decodeValue<G>(value));
+      try {
+        return Union7.in7(gMapper.decodeValue<G>(value));
+      } catch (e) {}
     }
 
     /// If no custom mapper is found, try to use the default mapper.
@@ -858,35 +914,51 @@ class Union8Mapper extends _SimpleMapper8<Union8> {
     /// First try to use the custom mapper for the type.
     final aMapper = container.mapperForType(A);
     if (aMapper != null) {
-      return Union8.in1(aMapper.decodeValue<A>(value));
+      try {
+        return Union8.in1(aMapper.decodeValue<A>(value));
+      } catch (e) {}
     }
     final bMapper = container.mapperForType(B);
     if (bMapper != null) {
-      return Union8.in2(bMapper.decodeValue<B>(value));
+      try {
+        return Union8.in2(bMapper.decodeValue<B>(value));
+      } catch (e) {}
     }
     final cMapper = container.mapperForType(C);
     if (cMapper != null) {
-      return Union8.in3(cMapper.decodeValue<C>(value));
+      try {
+        return Union8.in3(cMapper.decodeValue<C>(value));
+      } catch (e) {}
     }
     final dMapper = container.mapperForType(D);
     if (dMapper != null) {
-      return Union8.in4(dMapper.decodeValue<D>(value));
+      try {
+        return Union8.in4(dMapper.decodeValue<D>(value));
+      } catch (e) {}
     }
     final eMapper = container.mapperForType(E);
     if (eMapper != null) {
-      return Union8.in5(eMapper.decodeValue<E>(value));
+      try {
+        return Union8.in5(eMapper.decodeValue<E>(value));
+      } catch (e) {}
     }
     final fMapper = container.mapperForType(F);
     if (fMapper != null) {
-      return Union8.in6(fMapper.decodeValue<F>(value));
+      try {
+        return Union8.in6(fMapper.decodeValue<F>(value));
+      } catch (e) {}
     }
     final gMapper = container.mapperForType(G);
     if (gMapper != null) {
-      return Union8.in7(gMapper.decodeValue<G>(value));
+      try {
+        return Union8.in7(gMapper.decodeValue<G>(value));
+      } catch (e) {}
     }
     final hMapper = container.mapperForType(H);
     if (hMapper != null) {
-      return Union8.in8(hMapper.decodeValue<H>(value));
+      try {
+        return Union8.in8(hMapper.decodeValue<H>(value));
+      } catch (e) {}
     }
 
     /// If no custom mapper is found, try to use the default mapper.
@@ -956,39 +1028,57 @@ class Union9Mapper extends _SimpleMapper9<Union9> {
     /// First try to use the custom mapper for the type.
     final aMapper = container.mapperForType(A);
     if (aMapper != null) {
-      return Union9.in1(aMapper.decodeValue<A>(value));
+      try {
+        return Union9.in1(aMapper.decodeValue<A>(value));
+      } catch (e) {}
     }
     final bMapper = container.mapperForType(B);
     if (bMapper != null) {
-      return Union9.in2(bMapper.decodeValue<B>(value));
+      try {
+        return Union9.in2(bMapper.decodeValue<B>(value));
+      } catch (e) {}
     }
     final cMapper = container.mapperForType(C);
     if (cMapper != null) {
-      return Union9.in3(cMapper.decodeValue<C>(value));
+      try {
+        return Union9.in3(cMapper.decodeValue<C>(value));
+      } catch (e) {}
     }
     final dMapper = container.mapperForType(D);
     if (dMapper != null) {
-      return Union9.in4(dMapper.decodeValue<D>(value));
+      try {
+        return Union9.in4(dMapper.decodeValue<D>(value));
+      } catch (e) {}
     }
     final eMapper = container.mapperForType(E);
     if (eMapper != null) {
-      return Union9.in5(eMapper.decodeValue<E>(value));
+      try {
+        return Union9.in5(eMapper.decodeValue<E>(value));
+      } catch (e) {}
     }
     final fMapper = container.mapperForType(F);
     if (fMapper != null) {
-      return Union9.in6(fMapper.decodeValue<F>(value));
+      try {
+        return Union9.in6(fMapper.decodeValue<F>(value));
+      } catch (e) {}
     }
     final gMapper = container.mapperForType(G);
     if (gMapper != null) {
-      return Union9.in7(gMapper.decodeValue<G>(value));
+      try {
+        return Union9.in7(gMapper.decodeValue<G>(value));
+      } catch (e) {}
     }
     final hMapper = container.mapperForType(H);
     if (hMapper != null) {
-      return Union9.in8(hMapper.decodeValue<H>(value));
+      try {
+        return Union9.in8(hMapper.decodeValue<H>(value));
+      } catch (e) {}
     }
     final iMapper = container.mapperForType(I);
     if (iMapper != null) {
-      return Union9.in9(iMapper.decodeValue<I>(value));
+      try {
+        return Union9.in9(iMapper.decodeValue<I>(value));
+      } catch (e) {}
     }
 
     /// If no custom mapper is found, try to use the default mapper.

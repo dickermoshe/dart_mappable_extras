@@ -1,3 +1,7 @@
+## 0.2.5
+
+- Invalid UnionType exceptions don't throw. Follow up to 0.2.3.
+
 ## 0.2.4
 
 - Better mapper look up. Follow up to 0.2.3.
